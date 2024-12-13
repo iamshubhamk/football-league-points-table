@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eFootball League</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>eFootball League</h1>
+        
+        <!-- Match Entry Form -->
+        <div class="match-entry">
+            <h2>Enter Match Result</h2>
+            <form id="matchForm">
+                <div class="form-group">
+                    <select id="player1" required>
+                        <option value="">Select Player 1</option>
+                        <option value="Player 1">Lezter</option>
+                        <option value="Player 2">Jessi</option>
+                        <option value="Player 3">Kumar</option>
+                    </select>
+                    <input type="number" id="score1" min="0" required placeholder="Score">
+                </div>
+                <div class="form-group">
+                    <select id="player2" required>
+                        <option value="">Select Player 2</option>
+                        <option value="Player 1">Lezter</option>
+                        <option value="Player 2">Jessi</option>
+                        <option value="Player 3">Kumar</option>
+                    </select>
+                    <input type="number" id="score2" min="0" required placeholder="Score">
+                </div>
+                <button type="submit">Submit Result</button>
+            </form>
+        </div>
+
+        <!-- League Table -->
+        <div class="league-table">
+            <h2>League Standings</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Position</th>
+                        <th>Player</th>
+                        <th>MP</th>
+                        <th>W</th>
+                        <th>D</th>
+                        <th>L</th>
+                        <th>GF</th>
+                        <th>GA</th>
+                        <th>GD</th>
+                        <th>Points</th>
+                    </tr>
+                </thead>
+                <tbody id="leagueTableBody">
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Match History -->
+        <div class="match-history">
+            <h2>Match History</h2>
+            <div id="matchHistory"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
