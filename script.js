@@ -13,7 +13,7 @@ document.getElementById('matchForm').addEventListener('submit', function(e) {
     
     const player1 = document.getElementById('player1').value;
     const player2 = document.getElementById('player2').value;
-    const score1 = parseInt(document.getElementById('score2').value);
+    const score1 = parseInt(document.getElementById('score1').value);
     const score2 = parseInt(document.getElementById('score2').value);
     
     // Validate input
@@ -32,7 +32,7 @@ document.getElementById('matchForm').addEventListener('submit', function(e) {
     });
     
     // Update statistics
-    updateStats(player1, player2, score1, score2);
+    updateStats(player1, player2, Number(score1), Number(score2));
     updateTable();
     updateMatchHistory();
     
